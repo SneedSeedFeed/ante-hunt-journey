@@ -66,7 +66,7 @@ eah_hunt_ante_set_requirements = {
 	}
 }
 eah_hunt_ante_set_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
-eah_hunt_ante_set_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshuntset.18 } } }
+eah_hunt_ante_set_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshuntset.1 } } }
 
 eah_hunt_ante_tremere_requirements = {
 	scope = character
@@ -88,7 +88,7 @@ eah_hunt_ante_tremere_requirements = {
 	}
 }
 eah_hunt_ante_tremere_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
-eah_hunt_ante_tremere_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttremere.22 } } }
+eah_hunt_ante_tremere_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttremere.1 } } }
 
 eah_hunt_ante_troile_requirements = {
 	scope = character
@@ -111,7 +111,7 @@ eah_hunt_ante_troile_requirements = {
 	}
 }
 eah_hunt_ante_troile_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
-eah_hunt_ante_troile_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttroile.2 } } }
+eah_hunt_ante_troile_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttroile.1 } } }
 
 eah_hunt_ante_tzimisce_requirements = {
 	scope = character
