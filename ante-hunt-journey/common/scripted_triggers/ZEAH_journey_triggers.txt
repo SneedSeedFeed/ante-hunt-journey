@@ -1,0 +1,32 @@
+﻿
+# I should probably change this to eah_on_ante_hunt and flip the logic but I can't be bothered atm
+eah_not_on_ante_hunt_trigger = {
+	custom_tooltip = {
+		text = eah_not_on_ante_hunt_trigger_fail
+		NOT = {
+			var:current_journey ?= {
+				OR = {
+					var:journey_type ?= flag:eah_hunt_ante_absi
+					var:journey_type ?= flag:eah_hunt_ante_lasom
+					var:journey_type ?= flag:eah_hunt_ante_set
+					var:journey_type ?= flag:eah_hunt_ante_tremere
+					var:journey_type ?= flag:eah_hunt_ante_troile
+					var:journey_type ?= flag:eah_hunt_ante_tzimisce
+				}
+			}
+		}
+		NOT = {
+			any_in_list = {
+				variable = paused_journeys
+				OR = {
+					var:journey_type ?= flag:eah_hunt_ante_absi
+					var:journey_type ?= flag:eah_hunt_ante_lasom
+					var:journey_type ?= flag:eah_hunt_ante_set
+					var:journey_type ?= flag:eah_hunt_ante_tremere
+					var:journey_type ?= flag:eah_hunt_ante_troile
+					var:journey_type ?= flag:eah_hunt_ante_tzimisce
+				}
+			}
+		}
+	}
+}

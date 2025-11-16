@@ -1,0 +1,91 @@
+﻿
+eah_hunt_ante_icon = {
+	icon = "gfx/interface/icons/traits/vampgeneration3.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+
+eah_hunt_ante_absi_icon = {
+	icon = "gfx/interface/icons/traits/nosferatu.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_absi_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+
+eah_hunt_ante_lasom_icon = {
+	icon = "gfx/interface/icons/traits/lasombra.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_lasom_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+
+eah_hunt_ante_set_icon = {
+	icon = "gfx/interface/icons/traits/setite.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_set_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+
+eah_hunt_ante_tremere_icon = {
+	icon = "gfx/interface/icons/traits/tremere.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_tremere_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+
+eah_hunt_ante_troile_icon = {
+	icon = "gfx/interface/icons/traits/brujah.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_troile_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+
+eah_hunt_ante_tzimisce_icon = {
+	icon = "gfx/interface/icons/traits/tzimisce.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_tzimisce_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}

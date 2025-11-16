@@ -1,0 +1,43 @@
+﻿namespace = EAH_endgame
+
+# Close up the opportunity to ante hunt via journey
+EAH_endgame.1 = {
+	hidden = yes
+	scope = none
+
+	immediate = {
+		every_player = {
+			limit = {
+				NOT = { eah_not_on_ante_hunt_trigger = yes }
+			}
+			trigger_event = EAH_endgame.2
+		}
+
+		set_global_variable = {
+			name = variable_EAH_hunt_closed
+			value = yes
+		}
+	}
+}
+
+# The inquisiton looms, end all ante hunts
+EAH_endgame.2 = {
+	type = character_event
+	title = EAH_endgame.2.t
+	desc = EAH_endgame.2.desc
+	theme = inquisition
+	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	immediate = {
+		eah_abandon_all_ante_hunts_effect = yes
+	}
+	
+	# Todo: Add personality based flavour here. Not super important for a v1
+	option = {
+		name = EAH_endgame.2.a
+	}
+}

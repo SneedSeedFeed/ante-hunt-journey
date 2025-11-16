@@ -1,0 +1,83 @@
+﻿l_english:
+ # Doesn't seem the _travel_* and _isvalid entries are not used for journeys that dont require travel, shoving a placeholder in for now and will fix when/if i see them
+ eah_hunt_ante_name: "Hunt an Antediluvian"
+ eah_hunt_ante_tt: "I will stand above all"
+ eah_hunt_ante_desc: "Start searching for leads on the [Glossary('Antediluvians','game_concept_antediluvian_desc')]"
+
+ eah_hunt_ante_absi_name: "Hunt Absimiliard"
+ eah_hunt_ante_absi_desc: "Find the hiding place of the vile [GetScriptedCharacterByHistoryID('505011').GetFirstName]"
+ eah_hunt_ante_absi_effects: "You will begin the hunt for [GetScriptedCharacterByHistoryID('505011').GetFirstName]"
+ eah_hunt_ante_absi_tt: "His ugly soul will fuel your beautiful rise"
+ eah_hunt_ante_absi_planning_title: "Hunt Absimiliard"
+ eah_hunt_ante_absi_planning_desc: "The time is nigh to begin the next phase of your hunt to find [GetScriptedCharacterByHistoryID('505011').GetFirstName], yet you feel no more enlightened on his whereabouts than when you started. Vague mentions of the powerful witch [GetScriptedCharacterByHistoryID('505075').GetFirstName] and a few suggestions to ask [GetScriptedCharacterByHistoryID('790483').GetFirstName] of the Shadow Curtain are all you have to work with. Hard to say you expected much else given the nature of his progeny." # Note, those additional names refer to Baba Yaga and Viktor
+ eah_hunt_ante_absi_planning_confirm: "The hunter shall become the hunted!"
+ eah_hunt_ante_absi_planning_decline: "Perhaps I should prepare more..."
+ eah_hunt_ante_absi_travel_title: "PLACEHOLDER"
+ eah_hunt_ante_absi_travel_desc: "PLACEHOLDER"
+ eah_hunt_ante_absi_travel_confirm: "PLACEHOLDER"
+ eah_hunt_ante_absi_isvalid: "PLACEHOLDER"
+
+ eah_hunt_ante_lasom_name: "Hunt Lasombra"
+ eah_hunt_ante_lasom_desc: "Begin planning the siege of Castel del Ombro, resting place of [GetScriptedCharacterByHistoryID('505019').GetFirstName]"
+ eah_hunt_ante_lasom_effects: "You will begin preparing to siege Castel del Ombro"
+ eah_hunt_ante_lasom_tt: "He shall return to nothing"
+ eah_hunt_ante_lasom_planning_title: "Hunt Lau-Som-Bheu"
+ eah_hunt_ante_lasom_planning_desc: "The pieces are in place. Finding your target was not hard in the slightest, but finding the pieces you must field even to reach him was another matter entirely. Nevertheless, you are ready to begin gathering allies to penetrate into the heart of [GetScriptedCharacterByHistoryID('505019').GetFirstName]'s power"
+ eah_hunt_ante_lasom_planning_confirm: "A shadow shall fall upon Lasombra"
+ eah_hunt_ante_lasom_planning_decline: "My war chest may not be deep enough yet"
+ eah_hunt_ante_lasom_travel_title: "PLACEHOLDER"
+ eah_hunt_ante_lasom_travel_desc: "PLACEHOLDER"
+ eah_hunt_ante_lasom_travel_confirm: "PLACEHOLDER"
+ eah_hunt_ante_lasom_isvalid: "PLACEHOLDER"
+
+ eah_hunt_ante_set_name: "Hunt Set"
+ eah_hunt_ante_set_desc: "Begin searching for agents to assist in finding [GetScriptedCharacterByHistoryID('505012').GetFirstName]"
+ eah_hunt_ante_set_effects: "You will begin the search to find [GetScriptedCharacterByHistoryID('505012').GetFirstName] in earnest"
+ eah_hunt_ante_set_tt: "What shall it take to slay a 'god'?"
+ eah_hunt_ante_set_planning_title: "Hunt Set"
+ eah_hunt_ante_set_planning_desc: "You've compiled a book of names. Agents who might happen to know agents who might happen to know where the father of $pod_clan$ Setite may be resting. Tenuous leads at best, but when the reward is godhood you must simply take what you can get."
+ eah_hunt_ante_set_planning_confirm: "May his heart weigh less than a feather" # This is some of the few bits of ancient egyptian mythology I know i dont care if it fits
+ eah_hunt_ante_set_planning_decline: "Perhaps I should weigh the costs a little better first"
+ eah_hunt_ante_set_travel_title: "PLACEHOLDER"
+ eah_hunt_ante_set_travel_desc: "PLACEHOLDER"
+ eah_hunt_ante_set_travel_confirm: "PLACEHOLDER"
+ eah_hunt_ante_set_isvalid: "PLACEHOLDER"
+
+ eah_hunt_ante_tremere_name: "Hunt Tremere"
+ eah_hunt_ante_tremere_desc: "Begin the hunt for the Usurper, [GetScriptedCharacterByHistoryID('505022').GetFirstName]"
+ eah_hunt_ante_tremere_effects: "You shall begin scouring the $pod_clan$ strongholds to find [GetScriptedCharacterByHistoryID('505022').GetFirstName]"
+ eah_hunt_ante_tremere_tt: "Whose soul will you even be consuming?"
+ eah_hunt_ante_tremere_planning_title: "Hunt Tremere"
+ eah_hunt_ante_tremere_planning_desc: "A grand table strewn with maps of Europe: each meticulously marked by ink, blood and coin. The strongholds of $pod_clan$ Tremere have been carefully plotted out and your next steps clear. Each one must be investigated one by one to find [GetScriptedCharacterByHistoryID('505022').GetFirstName] or his whereabouts."
+ eah_hunt_ante_tremere_planning_confirm: "To diablerize the diablerist" # Maybe should be English spelling since it's 1230 AD?
+ eah_hunt_ante_tremere_planning_decline: "Maybe I should go over my notes again"
+ eah_hunt_ante_tremere_travel_title: "PLACEHOLDER"
+ eah_hunt_ante_tremere_travel_desc: "PLACEHOLDER"
+ eah_hunt_ante_tremere_travel_confirm: "PLACEHOLDER"
+ eah_hunt_ante_tremere_isvalid: "PLACEHOLDER"
+
+ eah_hunt_ante_troile_name: "Hunt Troile"
+ eah_hunt_ante_troile_desc: "Begin deciphering how to reach [GetScriptedCharacterByHistoryID('505016').GetFirstName]"
+ eah_hunt_ante_troile_effects: "Start your intrusion into Carthage"
+ eah_hunt_ante_troile_tt: "Disturb their rest" # Because she and carthage are buried I guess? I dunno I really struggle to come up with something good here
+ eah_hunt_ante_troile_planning_title: "Hunt Troile"
+ eah_hunt_ante_troile_planning_desc: "The [Glossary('Antediluvian','game_concept_antediluvian_desc')] [GetScriptedCharacterByHistoryID('505016').GetFirstName] rests beneath Carthage under ground sown with salt. That's all you know of them and it shall have to be plenty, not all [Glossary('Antediluvians','game_concept_antediluvian_desc')] are kind enough to make their resting place so obvious after all."
+ eah_hunt_ante_troile_planning_confirm: "Time to make the Ventrue jealous"
+ eah_hunt_ante_troile_planning_decline: "I shan't cross this salt line yet" # Once again my brain was out of interesting things to say, so something something salt lines something something salting razed cities
+ eah_hunt_ante_troile_travel_title: "PLACEHOLDER"
+ eah_hunt_ante_troile_travel_desc: "PLACEHOLDER"
+ eah_hunt_ante_troile_travel_confirm: "PLACEHOLDER"
+ eah_hunt_ante_troile_isvalid: "PLACEHOLDER"
+
+ eah_hunt_ante_tzimisce_name: "Hunt Tzimisce"
+ eah_hunt_ante_tzimisce_desc: "Begin listening to the many whispers surrounding [GetScriptedCharacterByHistoryID('505021').GetFirstName]"
+ eah_hunt_ante_tzimisce_effects: "Unpick a few strands of truth from the falsehoods, beginning your hunt for the Eldest in earnest"
+ eah_hunt_ante_tzimisce_tt: "I shall sup upon the evil of our world" # Ambiguously good/bad enough for me, referencing The Legend of Irad (source: whitewolf fandom wiki lol). I am too tired to write good so this'll do
+ eah_hunt_ante_tzimisce_planning_title: "Hunt Tzimisce"
+ eah_hunt_ante_tzimisce_planning_desc: "From hundreds of myriad half-truths cranked from a thousand rumour mills: you've discerned enough kernels of truth about the $pod_clan$ Tzimisce [Glossary('Antediluvian','game_concept_antediluvian_desc')] that for the first time in years it feels within reach. Although the more you've learnt of the tales that trail behind it, the more you feel you're just falling into its claws." # Not sure on pronouns, I went with 'it' because Tzimisce is a freak
+ eah_hunt_ante_tzimisce_planning_confirm: "Dwelling and worrying won't get me any further"
+ eah_hunt_ante_tzimisce_planning_decline: "I must still be missing something..."
+ eah_hunt_ante_tzimisce_travel_title: "PLACEHOLDER"
+ eah_hunt_ante_tzimisce_travel_desc: "PLACEHOLDER"
+ eah_hunt_ante_tzimisce_travel_confirm: "PLACEHOLDER"
+ eah_hunt_ante_tzimisce_isvalid: "PLACEHOLDER"

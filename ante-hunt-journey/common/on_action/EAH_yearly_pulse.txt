@@ -1,0 +1,5 @@
+﻿yearly_global_pulse = {
+	events = {
+		EAH_maintenance.1
+	}
+}

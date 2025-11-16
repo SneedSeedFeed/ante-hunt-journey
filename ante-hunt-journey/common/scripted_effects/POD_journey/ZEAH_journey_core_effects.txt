@@ -1,0 +1,87 @@
+﻿POD_refresh_journey_GUI = {
+	POD_clear_journey_GUI = { GUITYPE = journey }
+	POD_clear_journey_GUI = { GUITYPE = great_journey }
+	POD_clear_journey_GUI = { GUITYPE = seek_knowledge }
+	POD_clear_journey_GUI = { GUITYPE = realm_mastery }
+	POD_clear_journey_GUI = { GUITYPE = sorcery_legendary_studying }
+	POD_clear_journey_GUI = { GUITYPE = eah_hunt_ante }
+	#POD_clear_journey_GUI = { GUITYPE = find_artifact }
+	
+	POD_initialize_journey_GUI = yes
+}
+
+POD_journey_detail_open_effect = {
+	remove_variable = journey_detail_window_widget
+	remove_variable = journey_detail_window_subtype
+	
+	if = {
+		limit = { var:journey_detail_window ?= $STORY$ }
+		remove_variable = journey_detail_window
+	}
+	else = {
+		set_variable = {
+			name = journey_detail_window
+			value = $STORY$
+		}
+	
+		if = {
+			limit = { var:journey_detail_window.var:journey_type = flag:hunt_in_capital }
+			POD_hunt_in_capital_create_list_effect = yes
+		}
+		
+		switch = {
+			trigger = var:journey_detail_window.var:journey_type
+			
+			flag:seek_knowledge = {
+				set_variable = {
+					name = journey_detail_window_widget
+					value = flag:seek_knowledge
+				}
+			}
+			
+			flag:realm_mastery = {
+				set_variable = {
+					name = journey_detail_window_widget
+					value = flag:realm_mastery
+				}
+			}
+			
+			flag:find_artifact = {
+				set_variable = {
+					name = journey_detail_window_widget
+					value = flag:find_artifact
+				}
+			}
+			
+			flag:sorcery_legendary_studying = {
+				set_variable = {
+					name = journey_detail_window_widget
+					value = flag:sorcery_legendary_studying
+				}
+			}
+
+            flag:eah_hunt_ante = {
+                set_variable = {
+                    name = journey_detail_window_widget
+                    value = flag:eah_hunt_ante
+                }
+            }
+			
+			fallback = {
+				set_variable = {
+					name = journey_detail_window_subtype
+					value = var:journey_detail_window
+				}
+			}
+		}
+	}
+}
+
+eah_abandon_all_ante_hunts_effect = {
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_absi }
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_lasom }
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_set }
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_tremere }
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_troile }
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_tzimisce }
+}

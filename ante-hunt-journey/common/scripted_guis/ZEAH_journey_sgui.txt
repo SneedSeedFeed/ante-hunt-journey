@@ -1,0 +1,129 @@
+﻿# Part of me wanted to make this more restrictive. Like you have to be ambitious if above 4th gen but I am oh so lazy
+eah_hunt_ante_requirements = {
+	scope = character
+	is_shown = { 
+		AND = { 
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes 
+			NOT = { has_character_modifier = young_third_modifier }
+		} 
+	}
+	is_valid = { eah_not_on_ante_hunt_trigger = yes }
+}
+eah_hunt_ante_on_end = { scope = character effect = { } }
+eah_hunt_ante_travel_phase = { scope = character effect = { } }
+
+
+eah_hunt_ante_absi_requirements = {
+	scope = character
+	is_shown = { 
+		AND = { 
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes
+			NOT = { global_var:variable_POD_absi_dead ?= yes }
+			NOT = { has_character_modifier = young_third_modifier }
+		}
+	}
+	is_valid = { 
+		eah_not_on_ante_hunt_trigger = yes
+	 }
+}
+eah_hunt_ante_absi_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
+eah_hunt_ante_absi_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshuntabsi.2 } } }
+
+eah_hunt_ante_lasom_requirements = {
+	scope = character
+	is_shown = { 
+		AND = { 
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes
+			NOT = { global_var:variable_POD_lasombra_dead ?= yes }
+			NOT = { has_character_modifier = young_third_modifier }
+		}
+	}
+	is_valid = { eah_not_on_ante_hunt_trigger = yes }
+}
+eah_hunt_ante_lasom_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
+eah_hunt_ante_lasom_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshuntlasomb.1 } } }
+
+eah_hunt_ante_set_requirements = {
+	scope = character
+	is_shown = { 
+		AND = { 
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes 
+			NOT = { global_var:variable_POD_set_dead ?= yes }
+			NOT = { has_character_modifier = young_third_modifier }
+		} 
+	}
+	is_valid = { 
+		AND = {
+			NOT = {
+				has_religion = religion:roadofset_religion 
+			} 
+			eah_not_on_ante_hunt_trigger = yes
+		} 
+	}
+}
+eah_hunt_ante_set_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
+eah_hunt_ante_set_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshuntset.18 } } }
+
+eah_hunt_ante_tremere_requirements = {
+	scope = character
+	is_shown = { 
+		AND = { 
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes
+			NOT = { global_var:variable_POD_tremere_dead ?= yes }
+			NOT = { has_character_modifier = young_third_modifier }
+		}
+	}
+	is_valid = { 
+		AND = { 
+			NOT = { 
+				has_religion = religion:codeoftremere_religion 
+			}
+			eah_not_on_ante_hunt_trigger = yes
+		} 
+	}
+}
+eah_hunt_ante_tremere_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
+eah_hunt_ante_tremere_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttremere.22 } } }
+
+eah_hunt_ante_troile_requirements = {
+	scope = character
+	is_shown = { 
+		AND = {
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes
+			#NOT = { has_character_flag = given_up_troile_hunt_flag } # Looks like this is just used for "I don't have the right perks, run away" so if a player wants to retry when they have them I think that's fine?
+			NOT = { global_var:variable_POD_troile_dead ?= yes }
+			NOT = { has_character_modifier = young_third_modifier }
+		} 
+	}
+	is_valid = {
+		 AND = {
+			NOT = {
+				has_faith = faith:viaprometheus 
+			}
+			eah_not_on_ante_hunt_trigger = yes
+		} 
+	}
+}
+eah_hunt_ante_troile_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
+eah_hunt_ante_troile_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttroile.2 } } }
+
+eah_hunt_ante_tzimisce_requirements = {
+	scope = character
+	is_shown = { 
+		AND = { 
+			NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+			POD_is_vampire_trigger = yes
+			NOT = { global_var:variable_POD_tzimisce_dead ?= yes }
+			NOT = { has_character_modifier = young_third_modifier }
+		}
+	}
+	is_valid = { eah_not_on_ante_hunt_trigger = yes }
+}
+eah_hunt_ante_tzimisce_on_end = { scope = character effect = { POD_journey_select_capital_destination_effect = yes } }
+eah_hunt_ante_tzimisce_travel_phase = { scope = character effect = { POD_journey_start_travel_phase = { EVENT = POD_anteshunttzimisce.1 } } }

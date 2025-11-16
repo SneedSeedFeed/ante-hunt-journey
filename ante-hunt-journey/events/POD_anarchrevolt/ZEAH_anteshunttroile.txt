@@ -1,0 +1,224 @@
+﻿namespace = POD_anteshunttroile
+
+#Escape plan
+POD_anteshunttroile.2 = {
+	type = character_event
+	content_source = dlc_POD
+	title = POD_anteshunttroile.2.t
+	desc = POD_anteshunttroile.2.desc
+	theme = brujah_coa
+	
+	option = {
+		name = POD_anteshunttroile.2.a
+		
+		trigger = {
+			OR = {
+				has_trait = bloodsorceryadvanced
+				has_trait = temporisadvanced
+				has_trait = daimonionadvanced
+			}
+		}
+			
+		trigger_event = {
+				id = POD_anteshunttroile.3
+				days = { 10 15 }
+				}			
+		}	
+		
+	option = {
+		name = POD_anteshunttroile.2.b
+		
+		trigger = {
+			NOR = {
+				has_trait = bloodsorceryadvanced
+				has_trait = temporisadvanced
+				has_trait = daimonionadvanced
+			}
+			OR = {
+				has_trait = bloodsorcery
+				has_trait = temporis
+				has_trait = daimonion
+				learning >= 25				
+			}			
+		}
+		
+		remove_short_term_gold = 500
+		
+		add_prestige = -500
+		
+		trigger_event = {
+				id = POD_anteshunttroile.3
+				days = { 10 15 }
+				}			
+		}
+
+	option = {
+		name = POD_anteshunttroile.2.c
+		
+		trigger = {
+			NOR = {
+				has_trait = bloodsorceryadvanced
+				has_trait = temporisadvanced
+				has_trait = daimonionadvanced
+			}
+			NOR = {
+				has_trait = bloodsorcery
+				has_trait = temporis
+				has_trait = daimonion
+				learning >= 25
+			}			
+		}
+		
+		custom_tooltip = given_up_troile_hunt_tt
+		
+		add_character_flag = given_up_troile_hunt_flag
+		
+		# End the current journey if it's the Troile hunt
+		if = {
+			limit = {
+				var:current_journey ?= {
+					var:journey_type ?= flag:eah_hunt_ante_troile
+				}
+			}
+			POD_end_journey_can_retry_effect = yes 
+		}
+		else = {
+			# Only redirect back to root if not on the Troile journey
+			trigger_event = {
+				id = POD_anteshuntabsi.1
+				days = { 2 3}
+			}
+		}
+	}
+}
+
+#Troile is just too strong. Abort and clean up everything
+POD_anteshunttroile.10 = {
+	type = character_event
+	content_source = dlc_POD
+	title = POD_anteshunttroile.10.t
+	desc = POD_anteshunttroile.10.desc
+	theme = brujah_coa
+	
+	immediate = {
+		if = {
+			limit = {
+			exists = local_var:troile_strenght
+			}
+			remove_local_variable = troile_strenght 
+		}
+		if = {
+			limit = {
+			exists = local_var:carthage_insights
+			}
+			remove_local_variable = carthage_insights 
+		}
+		if = {
+			limit = {
+			has_character_flag = camilla_help_flag
+			}
+			remove_character_flag = camilla_help_flag 
+		}
+		if = {
+			limit = {
+			has_character_flag = lysander_help_flag
+			}
+			remove_character_flag = lysander_help_flag 
+		}
+		if = {
+			limit = {
+			has_character_flag = artemis_help_flag
+			}
+			remove_character_flag = artemis_help_flag 
+		}
+		if = {
+			limit = {
+			has_character_flag = cybele_help_flag
+			}
+			remove_character_flag = cybele_help_flag 
+		}
+		if = {
+			limit = {
+			has_character_flag = alchias_help_flag
+			}
+			remove_character_flag = alchias_help_flag 
+		}		
+	}
+	
+	option = {
+		name = POD_anteshunttroile.10.a
+	}
+
+	after = { POD_end_journey_effect = yes }
+}
+
+#Victory
+POD_anteshunttroile.18 = {
+	type = character_event
+	content_source = dlc_POD
+	title = POD_anteshunttroile.18.t
+	desc = POD_anteshunttroile.18.desc
+	theme = brujah_coa
+	
+	immediate = {
+		if = {
+			limit = {
+			exists = local_var:troile_strenght
+			}
+			remove_local_variable = troile_strenght 
+		}		
+	}
+
+	option = {
+		name = POD_anteshunttroile.18.a
+			
+		add_prestige = massive_prestige_value
+		add_prestige_level = 2				
+		
+		# Only change we make to the events, adding back the troile dead flag
+		set_global_variable = {
+			name = variable_POD_troile_dead
+			value = yes
+		}
+			
+		POD_remove_vampire_generation_traits_effect = yes	
+		add_trait_force_tooltip = vampgeneration3
+
+		assign_celerity_effect = yes
+		assign_potence_effect = yes
+		assign_presence_effect = yes
+		
+		POD_give_diablerist_secret_or_trait_effect = yes
+		
+		if = {
+			limit = { has_character_modifier = pseudo_third_modifier }
+			remove_character_modifier = pseudo_third_modifier
+		}
+		
+		if = {
+			limit = { NOT = { has_character_modifier = bloodpotency10_modifier } }
+			POD_remove_bloodpotency_modifiers_effect = yes
+			add_character_modifier = bloodpotency10_modifier
+		}	
+		
+		add_character_modifier = {
+			modifier = slayer_of_gods
+			years = 50
+			}
+
+		add_character_modifier = {
+			modifier = young_third_modifier
+			}	
+			
+		character:505016 = {
+			set_death_reason = {
+				death_reason = death_diablerie
+				killer = root
+			}
+		}		
+		
+		POD_achiev_nomnom_check = yes
+	}
+
+	after = { POD_end_journey_effect = yes }
+}

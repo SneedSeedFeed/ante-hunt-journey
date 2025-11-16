@@ -1,0 +1,167 @@
+﻿namespace = EAH_debug
+
+# Debug: Mark all Antediluvians as dead
+EAH_debug.1 = {
+	type = character_event
+	title = "DEBUG: Kill All Antediluvians"
+	desc = "This will mark all Antediluvians as dead for testing purposes."
+	
+	immediate = {
+		set_global_variable = {
+			name = variable_POD_absi_dead
+			value = yes
+		}
+		set_global_variable = {
+			name = variable_POD_lasombra_dead
+			value = yes
+		}
+		set_global_variable = {
+			name = variable_POD_set_dead
+			value = yes
+		}
+		set_global_variable = {
+			name = variable_POD_tremere_dead
+			value = yes
+		}
+		set_global_variable = {
+			name = variable_POD_troile_dead
+			value = yes
+		}
+		set_global_variable = {
+			name = variable_POD_tzimisce_dead
+			value = yes
+		}
+	}
+	
+	option = {
+		name = "All Antediluvians are now dead"
+		
+		show_as_tooltip = {
+			set_global_variable = {
+				name = variable_POD_absi_dead
+				value = yes
+			}
+			set_global_variable = {
+				name = variable_POD_lasombra_dead
+				value = yes
+			}
+			set_global_variable = {
+				name = variable_POD_set_dead
+				value = yes
+			}
+			set_global_variable = {
+				name = variable_POD_tremere_dead
+				value = yes
+			}
+			set_global_variable = {
+				name = variable_POD_troile_dead
+				value = yes
+			}
+			set_global_variable = {
+				name = variable_POD_tzimisce_dead
+				value = yes
+			}
+		}
+	}
+}
+
+# Debug: Mark all Antediluvians as alive
+EAH_debug.2 = {
+	type = character_event
+	title = "DEBUG: Revive All Antediluvians"
+	desc = "This will mark all Antediluvians as alive for testing purposes."
+	
+	immediate = {
+		set_global_variable = {
+			name = variable_POD_absi_dead
+			value = no
+		}
+		set_global_variable = {
+			name = variable_POD_lasombra_dead
+			value = no
+		}
+		set_global_variable = {
+			name = variable_POD_set_dead
+			value = no
+		}
+		set_global_variable = {
+			name = variable_POD_tremere_dead
+			value = no
+		}
+		set_global_variable = {
+			name = variable_POD_troile_dead
+			value = no
+		}
+		set_global_variable = {
+			name = variable_POD_tzimisce_dead
+			value = no
+		}
+	}
+	
+	option = {
+		name = "All Antediluvians are now alive (in variables only, they're still either dead or in torpor)"
+		
+		show_as_tooltip = {
+			set_global_variable = {
+				name = variable_POD_absi_dead
+				value = no
+			}
+			set_global_variable = {
+				name = variable_POD_lasombra_dead
+				value = no
+			}
+			set_global_variable = {
+				name = variable_POD_set_dead
+				value = no
+			}
+			set_global_variable = {
+				name = variable_POD_tremere_dead
+				value = no
+			}
+			set_global_variable = {
+				name = variable_POD_troile_dead
+				value = no
+			}
+			set_global_variable = {
+				name = variable_POD_tzimisce_dead
+				value = no
+			}
+		}
+	}
+}
+
+EAH_debug.3 = {
+	type = character_event
+	title = "DEBUG: Close the hunt"
+	desc = "Closes up hunt journeys"
+	
+	
+	immediate = {
+		set_global_variable = {
+			name = variable_EAH_hunt_closed
+			value = yes
+		}
+	}
+	
+	option = {
+		name="Closed :3"
+	}
+}
+
+EAH_debug.4 = {
+	type = character_event
+	title = "DEBUG: Open the hunt"
+	desc = "Opens up hunt journeys"
+	
+	
+	immediate = {
+		set_global_variable = {
+			name = variable_EAH_hunt_closed
+			value = no
+		}
+	}
+	
+	option = {
+		name="Open, yippeee :3"
+	}
+}

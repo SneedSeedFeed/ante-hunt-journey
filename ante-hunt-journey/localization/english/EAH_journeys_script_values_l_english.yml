@@ -1,0 +1,10 @@
+﻿l_english:
+ eah_hunt_ante_monthly_num: "#TOOLTIP:eah_hunt_ante_monthly_tt #V;L [GetPlayer.MakeScope.ScriptValue('eah_hunt_ante_progress_preview')|1]%#!#!"
+ eah_hunt_ante_monthly_tt: "$POD_journey_time_until_completion$ #V [JourneyYearsLeft('eah_hunt_ante_progress_preview')|0] $POD_journey_years$, [JourneyMonthsLeft('eah_hunt_ante_progress_preview')|0] $POD_journey_months$#!\n\n[GetPlayer.MakeScope.GetScriptValueDesc('eah_hunt_ante_progress_preview')]"
+
+ eah_hunt_ante_monthly_num_current: "#TOOLTIP:eah_hunt_ante_monthly_tt_current #V;L [GetPlayer.MakeScope.ScriptValue('eah_hunt_ante_progress')|1]%#!#!"
+ eah_hunt_ante_monthly_tt_current: "$POD_journey_time_remaining$ #V [JourneyYearsLeftCurrent('eah_hunt_ante_progress')|0] $POD_journey_years$, [JourneyMonthsLeftCurrent('eah_hunt_ante_progress')|0] $POD_journey_months$#!\n\n[GetPlayer.MakeScope.GetScriptValueDesc('eah_hunt_ante_progress')]"
+
+ eah_journey_progress_prestige: "Your [prestige_level|E]"
+
+ eah_journey_progress_base: "Base [planning_speed|E]"

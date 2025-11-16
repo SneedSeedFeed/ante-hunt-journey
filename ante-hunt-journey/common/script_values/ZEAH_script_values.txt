@@ -1,0 +1,44 @@
+﻿# main game version is 15 as of 15/11/2025
+current_journey_version = 16
+
+eah_hunt_ante_base_progress = 0.3 # 27 years, might be too short but could increase
+
+eah_hunt_ante_progress = {
+    add = {
+		value = eah_hunt_ante_base_progress
+		desc = eah_journey_progress_base
+		format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+	}
+	
+	if = {
+		limit = { prestige_level >= 1 }
+		add = {
+			value = eah_hunt_ante_base_progress
+			multiply = {
+				value = 0.5
+				multiply = prestige_level
+			}
+			desc = eah_journey_progress_prestige
+		}
+	}
+}
+
+eah_hunt_ante_progress_preview = {
+    add = {
+		value = eah_hunt_ante_base_progress
+		desc = eah_journey_progress_base
+		format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+	}
+	
+	if = {
+		limit = { prestige_level >= 1 }
+		add = {
+			value = eah_hunt_ante_base_progress
+			multiply = {
+				value = 0.5
+				multiply = prestige_level
+			}
+			desc = eah_journey_progress_prestige
+		}
+	}
+}
