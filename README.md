@@ -9,3 +9,4 @@ A basic mod that makes the Antediluvian hunts in Princes of Darkness possible an
 Todo:
 - Alter events to be more accurate when done early I.E having no mention of the anarchs yet when hunting lasombra. This will require more destructive changes to the base game events sadly
 - Make them harder too
+- Yama Kings
