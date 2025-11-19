@@ -49,7 +49,12 @@ POD_anteshunttremere.11 = {
 			has_character_flag = cluetremere2
 		}
 		}
-		POD_end_journey_effect = yes
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_tremere }
+			}
+			POD_end_journey_effect = yes
+		}
 		custom_tooltip =  antetzimisce_end	
 	}
 	
@@ -59,7 +64,12 @@ POD_anteshunttremere.11 = {
 		trigger = {
 			has_character_flag = cluetremere2
 		}
-		POD_end_journey_effect = yes
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_tremere }
+			}
+			POD_end_journey_effect = yes
+		}
 		custom_tooltip =  antetzimisce_end	
 	}
 
@@ -112,6 +122,13 @@ POD_anteshunttremere.22 = {
 			value = yes
 		}
 
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_tremere }
+			}
+			POD_end_journey_effect = yes
+		}
+
 		add_character_modifier = {
 			modifier = slayer_of_gods
 			years = 50
@@ -144,6 +161,4 @@ POD_anteshunttremere.22 = {
 		
 		POD_achiev_nomnom_check = yes
 	}
-	
-	after = { POD_end_journey_effect = yes }
 }

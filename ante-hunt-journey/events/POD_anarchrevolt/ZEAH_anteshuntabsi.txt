@@ -193,7 +193,14 @@ POD_anteshuntabsi.4 = {
 		
 	option = {
 		name = POD_anteshuntabsi.4.b
-		POD_end_journey_effect = yes
+		
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
+			}
+			POD_end_journey_effect = yes
+		}
+
 		custom_tooltip = anteabsi_end
 		
 		}				
@@ -245,7 +252,13 @@ POD_anteshuntabsi.5 = {
 			value = scope:real_prowess
 		}
 
-		POD_end_journey_effect = yes
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
+			}
+			POD_end_journey_effect = yes
+		}
+		
 		random_list = {
 			20 = {
 				modifier = {
@@ -303,6 +316,13 @@ POD_anteshuntabsi.19 = {
 			name = variable_POD_absi_dead
 			value = yes
 		}
+
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
+			}
+			POD_end_journey_effect = yes
+		}
 		
 		add_character_modifier = {
 			modifier = pseudo_third_modifier
@@ -319,7 +339,6 @@ POD_anteshuntabsi.19 = {
 				killer = character:505075
 			}
 		}
-		POD_end_journey_effect = yes
 	}		
 		
 	option = {
@@ -411,6 +430,13 @@ POD_anteshuntabsi.20 = {
 			name = variable_POD_absi_dead
 			value = yes
 		}
+
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
+			}
+			POD_end_journey_effect = yes
+		}
 		
 		if = {
 			limit = { has_character_modifier = pseudo_third_modifier }
@@ -438,7 +464,6 @@ POD_anteshuntabsi.20 = {
 				killer = root
 			}
 		}
-		POD_end_journey_effect = yes
 		POD_achiev_nomnom_check = yes	
 	}
 }

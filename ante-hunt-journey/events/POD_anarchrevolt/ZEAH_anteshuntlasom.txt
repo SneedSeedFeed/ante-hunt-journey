@@ -25,6 +25,13 @@ POD_anteshuntlasomb.18 = {
 			name = variable_POD_lasombra_dead
 			value = yes
 		}
+
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_lasom }
+			}
+			POD_end_journey_effect = yes
+		}
 			
 		POD_remove_vampire_generation_traits_effect = yes	
 		add_trait_force_tooltip = vampgeneration3
@@ -61,7 +68,6 @@ POD_anteshuntlasomb.18 = {
 				killer = root
 			}
 		}	
-		POD_end_journey_effect = yes
 		POD_achiev_nomnom_check = yes
 	}
 }
@@ -85,6 +91,13 @@ POD_anteshuntlasomb.19 = {
 			name = variable_POD_lasombra_dead
 			value = yes
 		}
+
+		if = {
+			limit = {
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_lasom }
+			}
+			POD_end_journey_effect = yes
+		}
 		
 		add_character_modifier = {
 			modifier = pseudo_third_modifier
@@ -93,8 +106,6 @@ POD_anteshuntlasomb.19 = {
 		add_character_modifier = {
 			modifier = slayer_of_gods
 			years = 50
-		}
-
-		POD_end_journey_effect = yes			
+		}	
 	}				
 }
