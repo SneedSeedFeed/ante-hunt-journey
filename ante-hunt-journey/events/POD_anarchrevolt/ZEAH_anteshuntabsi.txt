@@ -199,6 +199,89 @@ POD_anteshuntabsi.4 = {
 		}				
 }
 
+#Meeting Baba Yaga
+POD_anteshuntabsi.5 = {
+	type = character_event
+	content_source = dlc_POD
+	title = POD_anteshuntabsi.5.t
+	desc = POD_anteshuntabsi.5.desc
+	theme = nosferatu_coa
+	
+	immediate = {
+		POD_save_real_prowess = yes
+	}
+	
+	option = {
+		name = POD_anteshuntabsi.5.a
+	
+		if = {
+			limit = {
+				is_unbondable_trigger = yes
+			}
+			add_character_modifier = {
+				modifier = babayaga_bound_modifier
+				years = 10
+			}
+		}
+		
+		else = {
+			add_character_modifier = {
+				modifier = babayaga_bound_modifier
+				years = 50
+			}
+		}
+		
+		trigger_event = {
+			id = POD_anteshuntabsi.6
+			days = { 10 15 }
+		}
+	}
+	
+	option = {
+		name = POD_anteshuntabsi.5.b
+
+		custom_description_no_bullet = {
+			text  = POD_save_real_prowess_desc
+			value = scope:real_prowess
+		}
+
+		POD_end_journey_effect = yes
+		random_list = {
+			20 = {
+				modifier = {
+					add = {
+						value = scope:real_prowess
+						subtract = 70
+						multiply = 0.5
+					}
+				}
+				desc = POD_anteshuntabsi.5.effect.success.desc
+			}
+			20 = {
+				modifier = {
+					add = {
+						value = scope:real_prowess
+						subtract = 70
+						multiply = -0.5
+					}
+				}
+
+				desc = POD_anteshuntabsi.5.critical.failure.effect.desc
+				
+				send_interface_toast = {
+					title = POD_anteshuntabsi.5.critical.failure
+					left_icon = root
+
+					death = {
+						death_reason = death_execution
+					}
+				}
+			}
+		}	
+		custom_tooltip = anteabsi_end_baba
+	}			
+}
+
 #The forest : Victory?
 POD_anteshuntabsi.19 = {
 	type = character_event
