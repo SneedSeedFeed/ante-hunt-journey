@@ -214,10 +214,6 @@ POD_anteshuntabsi.5 = {
 	desc = POD_anteshuntabsi.5.desc
 	theme = nosferatu_coa
 	
-	immediate = {
-		POD_save_real_prowess = yes
-	}
-	
 	option = {
 		name = POD_anteshuntabsi.5.a
 	
@@ -247,40 +243,30 @@ POD_anteshuntabsi.5 = {
 	option = {
 		name = POD_anteshuntabsi.5.b
 
-		custom_description_no_bullet = {
-			text  = POD_save_real_prowess_desc
-			value = scope:real_prowess
-		}
-
 		if = {
 			limit = {
 				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
 			}
 			POD_end_journey_effect = yes
 		}
-		
-		random_list = {
+
+		duel = {
+			skill = prowess
+			value = 70
 			20 = {
-				modifier = {
-					add = {
-						value = scope:real_prowess
-						subtract = 70
-						multiply = 0.5
-					}
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5
 				}
 				desc = POD_anteshuntabsi.5.effect.success.desc
 			}
 			20 = {
-				modifier = {
-					add = {
-						value = scope:real_prowess
-						subtract = 70
-						multiply = -0.5
-					}
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
 				}
-
 				desc = POD_anteshuntabsi.5.critical.failure.effect.desc
-				
+
 				send_interface_toast = {
 					title = POD_anteshuntabsi.5.critical.failure
 					left_icon = root
@@ -290,7 +276,7 @@ POD_anteshuntabsi.5 = {
 					}
 				}
 			}
-		}	
+		}
 		custom_tooltip = anteabsi_end_baba
 	}			
 }
