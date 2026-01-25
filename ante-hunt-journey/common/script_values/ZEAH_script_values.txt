@@ -1,5 +1,5 @@
-﻿# main game version is 15 as of 15/11/2025
-current_journey_version = 16
+﻿# main game version is 16 as of 25/01/2026
+current_journey_version = 17
 
 eah_hunt_ante_base_progress = 0.3 # 27 years, might be too short but could increase
 
