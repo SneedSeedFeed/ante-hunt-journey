@@ -89,8 +89,9 @@ POD_anteshuntlasomb.19 = {
 
 		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_lasom }
 		
-		add_character_modifier = {
-			modifier = pseudo_third_modifier
+		if = {
+			limit = { NOT = { has_character_modifier = young_third_modifier } }
+			add_character_modifier = pseudo_third_modifier
 		}
 
 		add_character_modifier = {

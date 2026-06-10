@@ -108,6 +108,12 @@ POD_anteshuntabsi.100 = {
 
 		trigger = {
 			NOT = { global_var:variable_POD_tzimisce_dead ?= yes }
+			#This trigger is just to show the Azhi Dahaka icon on the option if you have the trait since it unlocks a special outcome
+			trigger_if = {
+				limit = { has_trait = azhi_dahaka }
+				has_trait = azhi_dahaka
+			}
+			trigger_else = { always = yes }
 		}
 		
 		trigger_event = {
@@ -295,8 +301,9 @@ POD_anteshuntabsi.19 = {
 
 		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_absi }
 		
-		add_character_modifier = {
-			modifier = pseudo_third_modifier
+		if = {
+			limit = { NOT = { has_character_modifier = young_third_modifier } }
+			add_character_modifier = pseudo_third_modifier
 		}
 
 		add_character_modifier = {
