@@ -1,5 +1,5 @@
-﻿# main game version is 15 as of 15/11/2025
-current_journey_version = 16
+﻿# main game version is 16 as of 10/06/2026 (PoD changed the azhi dahaka journeys without bumping)
+current_journey_version = 18
 
 eah_hunt_ante_base_progress = 0.3 # 27 years, might be too short but could increase
 

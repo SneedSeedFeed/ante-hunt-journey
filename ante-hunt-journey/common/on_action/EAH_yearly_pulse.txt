@@ -3,3 +3,16 @@
 		EAH_maintenance.1
 	}
 }
+
+# removes any ante hunt journey where the ante is already dead
+on_game_start_after_lobby = {
+	on_actions = { EAH_journey_state_healing }
+}
+
+EAH_journey_state_healing = {
+	effect = {
+		every_player = {
+			eah_cleanup_stale_ante_journeys_effect = yes
+		}
+	}
+}

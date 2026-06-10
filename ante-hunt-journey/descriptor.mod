@@ -1,11 +1,11 @@
-version="0.0.1"
+version="0.3.0"
 tags={
-	"Gameplay",
+	"Gameplay"
 	"Submod"
 }
 name="[PoD Submod] Antediluvian Hunt Journey"
 dependencies={
 	"Princes of Darkness"
 }
-supported_version="1.18.1.*"
+supported_version="1.19.*"
 remote_file_id="3606543260"

@@ -28,10 +28,10 @@ POD_anteshunttzimisce.3 = {
 		
 	option = {
 		name = POD_anteshunttzimisce.3.b
-		POD_end_journey_effect = yes
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_tzimisce }
 		custom_tooltip = antetzimisce_end
 		
-		}				
+	}				
 }
 
 #Ilias' story
@@ -55,7 +55,7 @@ POD_anteshunttzimisce.5 = {
 		
 	option = {
 		name = POD_anteshunttzimisce.5.b
-		POD_end_journey_effect = yes
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_tzimisce }
 		custom_tooltip = antetzimisce_end	
 		}
 }
@@ -105,7 +105,9 @@ POD_anteshunttzimisce.15 = {
 				id = POD_anteshunttzimisce.17
 				days = 15 
 				}
-		}	
+		}
+
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_tzimisce }
 		
 		POD_remove_vampire_generation_traits_effect = yes	
 		add_trait_force_tooltip = vampgeneration3
@@ -142,7 +144,6 @@ POD_anteshunttzimisce.15 = {
 				killer = root
 			}
 		}
-		POD_end_journey_effect = yes
 		POD_achiev_nomnom_check = yes
 	}
 }
@@ -166,9 +167,12 @@ POD_anteshunttzimisce.16 = {
 			name = variable_POD_tzimisce_dead
 			value = yes
 		}
+
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_tzimisce }
 		
-		add_character_modifier = {
-			modifier = pseudo_third_modifier
+		if = {
+			limit = { NOT = { has_character_modifier = young_third_modifier } }
+			add_character_modifier = pseudo_third_modifier
 		}
 		
 		if = { 
@@ -185,6 +189,6 @@ POD_anteshunttzimisce.16 = {
 			years = 50
 			}			
 		}		
-		POD_end_journey_effect = yes		
+
 }
 

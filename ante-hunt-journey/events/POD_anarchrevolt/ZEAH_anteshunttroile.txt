@@ -76,17 +76,15 @@ POD_anteshunttroile.2 = {
 		# End the current journey if it's the Troile hunt
 		if = {
 			limit = {
-				var:current_journey ?= {
-					var:journey_type ?= flag:eah_hunt_ante_troile
-				}
+				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_troile }
 			}
-			POD_end_journey_can_retry_effect = yes 
+			POD_end_journey_can_retry_effect = yes
 		}
 		else = {
 			# Only redirect back to root if not on the Troile journey
 			trigger_event = {
 				id = POD_anteshuntabsi.1
-				days = { 2 3}
+				days = { 2 3 }
 			}
 		}
 	}
@@ -147,9 +145,9 @@ POD_anteshunttroile.10 = {
 	
 	option = {
 		name = POD_anteshunttroile.10.a
-	}
 
-	after = { POD_end_journey_effect = yes }
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_troile }
+	}
 }
 
 #Victory
@@ -180,6 +178,8 @@ POD_anteshunttroile.18 = {
 			name = variable_POD_troile_dead
 			value = yes
 		}
+
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_troile }
 			
 		POD_remove_vampire_generation_traits_effect = yes	
 		add_trait_force_tooltip = vampgeneration3
@@ -219,6 +219,4 @@ POD_anteshunttroile.18 = {
 		
 		POD_achiev_nomnom_check = yes
 	}
-
-	after = { POD_end_journey_effect = yes }
 }
