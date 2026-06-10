@@ -85,3 +85,105 @@ eah_abandon_all_ante_hunts_effect = {
 	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_troile }
 	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_tzimisce }
 }
+
+# nuclear journey termination
+eah_end_ante_journey_effect = {
+	if = {
+		limit = {
+			OR = {
+				var:current_journey ?= { var:journey_type ?= flag:$TYPE$ }
+				any_in_list = {
+					variable = paused_journeys
+					count > 0
+					var:journey_type ?= flag:$TYPE$
+				}
+			}
+		}
+		custom_tooltip = POD_end_journey_tt
+	}
+
+	hidden_effect = {
+		if = {
+			limit = {
+				var:current_journey ?= { var:journey_type ?= flag:$TYPE$ }
+			}
+			POD_end_journey_effect = yes
+		}
+
+		if = {
+			limit = {
+				var:current_journey ?= {
+					var:journey_type ?= flag:$TYPE$
+					NOT = { has_variable = on_return_trip }
+				}
+			}
+			POD_journey_cleanup_effect = yes
+		}
+
+		every_in_list = {
+			variable = paused_journeys
+			limit = {
+				var:journey_type ?= flag:$TYPE$
+				var:total_progress >= 100
+			}
+			save_scope_as = abandoned_journey
+			prev = {
+				trigger_event = {
+					on_action = POD_on_journey_abandoned
+				}
+				remove_list_variable = {
+					name = paused_journeys
+					target = prev
+				}
+			}
+			end_story = yes
+		}
+	}
+}
+
+# character scope, clear hunts on dead antes
+eah_cleanup_stale_ante_journeys_effect = {
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_absi DEADVAR = variable_POD_absi_dead }
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_lasom DEADVAR = variable_POD_lasombra_dead }
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_set DEADVAR = variable_POD_set_dead }
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_tremere DEADVAR = variable_POD_tremere_dead }
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_troile DEADVAR = variable_POD_troile_dead }
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_tzimisce DEADVAR = variable_POD_tzimisce_dead }
+}
+
+eah_cleanup_stale_ante_journey_single_effect = {
+	if = {
+		limit = { global_var:$DEADVAR$ ?= yes }
+		if = {
+			limit = {
+				var:current_journey ?= { var:journey_type ?= flag:$TYPE$ }
+			}
+			POD_end_journey_effect = yes
+		}
+		if = {
+			limit = {
+				var:current_journey ?= {
+					var:journey_type ?= flag:$TYPE$
+					NOT = { has_variable = on_return_trip }
+				}
+			}
+			POD_journey_cleanup_effect = yes
+		}
+
+		every_in_list = {
+			variable = paused_journeys
+			limit = { var:journey_type ?= flag:$TYPE$ }
+			save_scope_as = abandoned_journey
+			prev = {
+				trigger_event = {
+					on_action = POD_on_journey_abandoned
+				}
+				remove_list_variable = {
+					name = paused_journeys
+					target = prev
+				}
+			}
+			end_story = yes
+		}
+	}
+}

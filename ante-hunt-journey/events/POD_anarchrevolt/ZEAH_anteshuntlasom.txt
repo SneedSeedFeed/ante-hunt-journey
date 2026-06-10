@@ -26,12 +26,7 @@ POD_anteshuntlasomb.18 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_lasom }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_lasom }
 			
 		POD_remove_vampire_generation_traits_effect = yes	
 		add_trait_force_tooltip = vampgeneration3
@@ -92,12 +87,7 @@ POD_anteshuntlasomb.19 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_lasom }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_lasom }
 		
 		add_character_modifier = {
 			modifier = pseudo_third_modifier

@@ -194,12 +194,7 @@ POD_anteshuntabsi.4 = {
 	option = {
 		name = POD_anteshuntabsi.4.b
 		
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_absi }
 
 		custom_tooltip = anteabsi_end
 		
@@ -243,12 +238,7 @@ POD_anteshuntabsi.5 = {
 	option = {
 		name = POD_anteshuntabsi.5.b
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_absi }
 
 		duel = {
 			skill = prowess
@@ -303,12 +293,7 @@ POD_anteshuntabsi.19 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_absi }
 		
 		add_character_modifier = {
 			modifier = pseudo_third_modifier
@@ -417,12 +402,7 @@ POD_anteshuntabsi.20 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_absi }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_absi }
 		
 		if = {
 			limit = { has_character_modifier = pseudo_third_modifier }

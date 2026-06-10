@@ -146,12 +146,7 @@ POD_anteshunttroile.10 = {
 	option = {
 		name = POD_anteshunttroile.10.a
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_troile }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_troile }
 	}
 }
 
@@ -184,12 +179,7 @@ POD_anteshunttroile.18 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_troile }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_troile }
 			
 		POD_remove_vampire_generation_traits_effect = yes	
 		add_trait_force_tooltip = vampgeneration3

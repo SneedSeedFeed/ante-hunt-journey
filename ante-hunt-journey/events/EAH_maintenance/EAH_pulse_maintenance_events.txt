@@ -1,19 +1,25 @@
-﻿namespace = EAH_maintenance
+namespace = EAH_maintenance
 # When the inquisition arrives, hunting those dastardly antediluvians is off the table
 
-# I don't know the convention for numbering this sort of thing so I chose 1
-# Currently this event just checks if it's endgame time then calls the clean-up event
+# close hunts for end game and try to clean up what we can
 EAH_maintenance.1 = {
 	hidden = yes
 	scope = none
 
-	if = {
-		limit = {
-			current_year = inquisition_spawn_year
+	immediate = {
+		if = {
+			limit = {
+				NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+				character:POD_wraith_01 ?= { current_year >= inquisition_spawn_year }
+			}
+			trigger_event = {
+				id = EAH_endgame.1
+				days = { 0 }
+			}
 		}
-		trigger_event = {
-			id = EAH_endgame.1
-			days = { 0 }
+		
+		every_player = {
+			eah_cleanup_stale_ante_journeys_effect = yes
 		}
 	}
 }

@@ -27,12 +27,7 @@ POD_anteshuntset.1 = {
 
 	option = {
 		name = POD_anteshuntset.1.b
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_set }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_set }
 		custom_tooltip = set_end_warning	
 		}					
 }
@@ -67,12 +62,7 @@ POD_anteshuntset.12 = {
 		
 		set_character_faith = faith:viaset
 		
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_set }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_set }
 		}
 }
 
@@ -103,12 +93,7 @@ POD_anteshuntset.18 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_set }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_set }
 		
 		POD_remove_vampire_generation_traits_effect = yes	
 		add_trait_force_tooltip = vampgeneration3
@@ -170,12 +155,7 @@ POD_anteshuntset.19 = {
 			value = yes
 		}
 
-		if = {
-			limit = {
-				POD_is_on_journey_trigger = { TYPE = eah_hunt_ante_set }
-			}
-			POD_end_journey_effect = yes
-		}
+		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_set }
 		
 		add_character_modifier = {
 			modifier = pseudo_third_modifier
