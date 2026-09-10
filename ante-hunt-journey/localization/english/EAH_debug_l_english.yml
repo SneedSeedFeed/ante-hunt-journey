@@ -1,0 +1,13 @@
+﻿l_english:
+  EAH_debug.1.t:0 "DEBUG: Kill All Antediluvians"
+  EAH_debug.1.desc:0 "This will mark all Antediluvians as dead for testing purposes."
+  EAH_debug.1.a:0 "All Antediluvians are now dead"
+  EAH_debug.2.t:0 "DEBUG: Revive All Antediluvians"
+  EAH_debug.2.desc:0 "This will mark all Antediluvians as alive for testing purposes."
+  EAH_debug.2.a:0 "All Antediluvians are now alive (in variables only, they're still either dead or in torpor)"
+  EAH_debug.3.t:0 "DEBUG: Close the hunt"
+  EAH_debug.3.desc:0 "Closes up hunt journeys"
+  EAH_debug.3.a:0 "Closed :3"
+  EAH_debug.4.t:0 "DEBUG: Open the hunt"
+  EAH_debug.4.desc:0 "Opens up hunt journeys"
+  EAH_debug.4.a:0 "Open, yippeee :3"

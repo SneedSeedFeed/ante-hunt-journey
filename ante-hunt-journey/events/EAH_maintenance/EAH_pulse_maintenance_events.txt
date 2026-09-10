@@ -1,4 +1,4 @@
-namespace = EAH_maintenance
+﻿namespace = EAH_maintenance
 # When the inquisition arrives, hunting those dastardly antediluvians is off the table
 
 # close hunts for end game and try to clean up what we can
@@ -14,7 +14,6 @@ EAH_maintenance.1 = {
 			}
 			trigger_event = {
 				id = EAH_endgame.1
-				days = { 0 }
 			}
 		}
 		

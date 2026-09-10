@@ -3,8 +3,10 @@
 # Debug: Mark all Antediluvians as dead
 EAH_debug.1 = {
 	type = character_event
-	title = "DEBUG: Kill All Antediluvians"
-	desc = "This will mark all Antediluvians as dead for testing purposes."
+	orphan = yes
+	theme = nosferatu_coa
+	title = EAH_debug.1.t
+	desc = EAH_debug.1.desc
 	
 	immediate = {
 		set_global_variable = {
@@ -34,7 +36,7 @@ EAH_debug.1 = {
 	}
 	
 	option = {
-		name = "All Antediluvians are now dead"
+		name = EAH_debug.1.a
 		
 		show_as_tooltip = {
 			set_global_variable = {
@@ -68,8 +70,10 @@ EAH_debug.1 = {
 # Debug: Mark all Antediluvians as alive
 EAH_debug.2 = {
 	type = character_event
-	title = "DEBUG: Revive All Antediluvians"
-	desc = "This will mark all Antediluvians as alive for testing purposes."
+	orphan = yes
+	theme = nosferatu_coa
+	title = EAH_debug.2.t
+	desc = EAH_debug.2.desc
 	
 	immediate = {
 		set_global_variable = {
@@ -99,7 +103,7 @@ EAH_debug.2 = {
 	}
 	
 	option = {
-		name = "All Antediluvians are now alive (in variables only, they're still either dead or in torpor)"
+		name = EAH_debug.2.a
 		
 		show_as_tooltip = {
 			set_global_variable = {
@@ -132,8 +136,10 @@ EAH_debug.2 = {
 
 EAH_debug.3 = {
 	type = character_event
-	title = "DEBUG: Close the hunt"
-	desc = "Closes up hunt journeys"
+	orphan = yes
+	theme = nosferatu_coa
+	title = EAH_debug.3.t
+	desc = EAH_debug.3.desc
 	
 	
 	immediate = {
@@ -144,14 +150,16 @@ EAH_debug.3 = {
 	}
 	
 	option = {
-		name="Closed :3"
+		name = EAH_debug.3.a
 	}
 }
 
 EAH_debug.4 = {
 	type = character_event
-	title = "DEBUG: Open the hunt"
-	desc = "Opens up hunt journeys"
+	orphan = yes
+	theme = nosferatu_coa
+	title = EAH_debug.4.t
+	desc = EAH_debug.4.desc
 	
 	
 	immediate = {
@@ -162,6 +170,6 @@ EAH_debug.4 = {
 	}
 	
 	option = {
-		name="Open, yippeee :3"
+		name = EAH_debug.4.a
 	}
 }
