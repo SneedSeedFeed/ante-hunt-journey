@@ -1,4 +1,4 @@
-namespace = PODanarchrevolt
+﻿namespace = PODanarchrevolt
 
 scripted_trigger POD_is_valid_ante_slayer_trigger = {
 	is_ai = yes
