@@ -100,6 +100,7 @@ eah_abandon_all_ante_hunts_effect = {
 	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_tremere }
 	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_troile }
 	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_tzimisce }
+	POD_abandon_journeys_of_type_effect = { TYPE = eah_hunt_ante_arikel }
 }
 
 # nuclear journey termination
@@ -165,6 +166,7 @@ eah_cleanup_stale_ante_journeys_effect = {
 	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_tremere DEADVAR = variable_POD_tremere_dead }
 	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_troile DEADVAR = variable_POD_troile_dead }
 	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_tzimisce DEADVAR = variable_POD_tzimisce_dead }
+	eah_cleanup_stale_ante_journey_single_effect = { TYPE = eah_hunt_ante_arikel DEADVAR = variable_POD_arikel_dead }
 }
 
 eah_cleanup_stale_ante_journey_single_effect = {

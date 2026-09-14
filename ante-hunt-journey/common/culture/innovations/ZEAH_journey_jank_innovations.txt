@@ -89,3 +89,15 @@ eah_hunt_ante_tzimisce_illustration = {
 	group = culture_group_regional
 	culture_era = culture_era_final_nights
 }
+eah_hunt_ante_arikel_icon = {
+	icon = "gfx/interface/icons/traits/toreador.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}
+eah_hunt_ante_arikel_illustration = {
+	icon = "gfx/interface/illustrations/decisions/decision_torpor.dds"
+	potential = { always = no }
+	group = culture_group_regional
+	culture_era = culture_era_final_nights
+}

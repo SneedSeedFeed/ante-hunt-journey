@@ -81,3 +81,17 @@
  eah_hunt_ante_tzimisce_travel_desc: "PLACEHOLDER"
  eah_hunt_ante_tzimisce_travel_confirm: "PLACEHOLDER"
  eah_hunt_ante_tzimisce_isvalid: "PLACEHOLDER"
+
+# add different flavour text if player is nosferatu maybe?
+ eah_hunt_ante_arikel_name: "Hunt Arikel"
+ eah_hunt_ante_arikel_desc: "Trace the scattered legends of [GetScriptedCharacterByHistoryID('505006').GetFirstName], Founder of the Clan of the Rose"
+ eah_hunt_ante_arikel_effects: "You will begin the hunt for [GetScriptedCharacterByHistoryID('505006').GetFirstName]"
+ eah_hunt_ante_arikel_tt: "Pluck the first rose"
+ eah_hunt_ante_arikel_planning_title: "Hunt Arikel"
+ eah_hunt_ante_arikel_planning_desc: "Arikel. Ishtar. Aphrodite. Names scattered through the ruins of forgotten kingdoms, each concealing another fragment of the same elusive Founder. Years spent tracing legends and cultivating contacts have given you leads worth pursuing. Turning those leads into a path to her resting place will demand further resources, and surviving what waits there will demand far more."
+ eah_hunt_ante_arikel_planning_confirm: "I will find the heart of the Rose"
+ eah_hunt_ante_arikel_planning_decline: "I am not ready to face her"
+ eah_hunt_ante_arikel_travel_title: "The Hunt for Arikel"
+ eah_hunt_ante_arikel_travel_desc: "Follow the surviving traces of the Founder of Clan Toreador"
+ eah_hunt_ante_arikel_travel_confirm: "Follow the leads"
+ eah_hunt_ante_arikel_isvalid: "Arikel has not already been consumed"

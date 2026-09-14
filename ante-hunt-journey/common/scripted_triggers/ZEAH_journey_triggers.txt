@@ -12,6 +12,7 @@ eah_not_on_ante_hunt_trigger = {
 					var:journey_type ?= flag:eah_hunt_ante_tremere
 					var:journey_type ?= flag:eah_hunt_ante_troile
 					var:journey_type ?= flag:eah_hunt_ante_tzimisce
+					var:journey_type ?= flag:eah_hunt_ante_arikel
 				}
 			}
 		}
@@ -25,7 +26,29 @@ eah_not_on_ante_hunt_trigger = {
 					var:journey_type ?= flag:eah_hunt_ante_tremere
 					var:journey_type ?= flag:eah_hunt_ante_troile
 					var:journey_type ?= flag:eah_hunt_ante_tzimisce
+					var:journey_type ?= flag:eah_hunt_ante_arikel
 				}
+			}
+		}
+	}
+}
+
+# Objective hunts remain available after the early journey window closes.
+# The origin scope value is inherited by the journey's delayed events.
+eah_arikel_hunt_can_continue_trigger = {
+	NOT = { global_var:variable_POD_arikel_dead ?= yes }
+	trigger_if = {
+		limit = { scope:eah_arikel_journey_hunt ?= yes }
+		NOT = { global_var:variable_EAH_hunt_closed ?= yes }
+		OR = {
+			var:current_journey ?= {
+				var:journey_type ?= flag:eah_hunt_ante_arikel
+				var:phase ?= flag:travel_phase
+			}
+			any_in_list = {
+				variable = paused_journeys
+				var:journey_type ?= flag:eah_hunt_ante_arikel
+				var:phase ?= flag:travel_phase
 			}
 		}
 	}

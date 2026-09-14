@@ -1257,6 +1257,15 @@ POD_initialize_journey_GUI = {
 	}
 
 	POD_add_to_journey_list = {
+		TYPE     = eah_hunt_ante_arikel
+		GUITYPE  = eah_hunt_ante
+		MONTHLY  = eah_hunt_ante
+		GOLD     = 1000
+		PRESTIGE = 1000
+		PIETY    = 0
+	}
+
+	POD_add_to_journey_list = {
 		TYPE     = spell_of_life_stage2_targeted_journey
 		GUITYPE  = journey
 		MONTHLY  = spell_of_life_stage2_targeted_journey
