@@ -1,0 +1,88 @@
+﻿namespace = PODanarchrevolt
+
+scripted_trigger POD_is_valid_ante_slayer_trigger = {
+	is_ai = yes
+	NOT = { has_faith = faith:laibon }
+	POD_is_on_golconda_trigger = no
+	POD_is_available_for_events = yes
+}
+
+scripted_trigger POD_is_valid_for_anarch_conversion = {
+	NOT = { has_faith = faith:laibon }
+	POD_has_valid_splat_agnostic_faith = no # exclude demon faiths and the like
+	is_a_neteru = no
+	POD_is_available_for_events = yes
+}
+
+PODanarchrevolt.0011 = {
+	id_override_priority = 1
+	trigger = { NOT = { global_var:variable_POD_arikel_dead ?= yes } }
+	hidden = yes
+	scope = none
+
+	immediate = {
+		random_ruler = {
+			limit = {
+				POD_is_valid_ante_slayer_trigger = yes
+				POD_is_valid_for_anarch_conversion = yes
+				is_toreador_trigger = yes
+			}
+			set_character_faith = faith:freeanarch
+			save_scope_as = toreador_killer
+			add_character_modifier = {
+				modifier = slayer_of_gods
+			}
+		}
+		every_living_character = {
+			limit = {
+				is_vampire_trigger = yes
+				OR = {
+					is_toreador_trigger = yes
+					is_ai = no
+				}
+				POD_is_valid_for_anarch_conversion = yes
+			}
+			trigger_event = PODanarchrevolt.0012
+		}
+	}
+
+}
+
+PODanarchrevolt.0016 = {
+	id_override_priority = 1
+	hidden = yes
+	scope = none
+
+	immediate = {
+
+		random_list = {
+			50 = {
+				trigger_event = {
+						id = PODanarchrevolt.0009
+						days = { 10 15 }
+					}
+				modifier = {
+					factor = 0
+					has_global_variable = variable_POD_tzimisce_dead
+					}
+				}
+			20 = {
+				trigger_event = {
+						id = PODanarchrevolt.0011
+						days = { 10 15 }
+					}
+				modifier = {
+					factor = 0
+					global_var:variable_POD_arikel_dead ?= yes
+				}
+				}
+			10 = {
+				trigger_event = {
+						id = PODanarchrevolt.0013
+						days = { 10 15 }
+					}
+				}
+		}
+	}
+
+}

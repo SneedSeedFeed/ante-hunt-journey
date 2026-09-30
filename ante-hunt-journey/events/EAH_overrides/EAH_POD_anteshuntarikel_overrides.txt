@@ -1,8 +1,7 @@
 ﻿namespace = POD_anteshuntarikel
 
-#Intro Event
-
 POD_anteshuntarikel.1 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -45,8 +44,8 @@ POD_anteshuntarikel.1 = {
 				id = POD_anteshuntarikel.2
 				days = { 10 15 }
 				}
-				
-		custom_tooltip = big_freaking_warning		
+
+		custom_tooltip = big_freaking_warning
 	}
 
 	option = {
@@ -56,13 +55,12 @@ POD_anteshuntarikel.1 = {
 
 		add_character_flag = given_up_arikel_hunt_flag
 		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_arikel }
-		
+
 		}
 }
 
-#Finding Arikel
-
 POD_anteshuntarikel.2 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -116,9 +114,8 @@ POD_anteshuntarikel.2 = {
 		}
 }
 
-#Accessing Labyrinth
-
 POD_anteshuntarikel.3 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -132,6 +129,8 @@ POD_anteshuntarikel.3 = {
 
 	option = {
 		name = POD_anteshuntarikel.3.a
+
+		remove_short_term_gold = 2000
 
         duel = {
             skill = stewardship
@@ -165,14 +164,14 @@ POD_anteshuntarikel.3 = {
             }
 
         }
-		
+
 	option = {
 		name = POD_anteshuntarikel.3.b
 
 		show_as_unavailable = {
 			NOT = { has_trait = proteanadvanced }
 		}
-		
+
 		trigger = {
 			has_trait = proteanadvanced
 		}
@@ -188,9 +187,8 @@ POD_anteshuntarikel.3 = {
 
 }
 
-#Labyrinth Failure
-
 POD_anteshuntarikel.40 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -215,13 +213,12 @@ POD_anteshuntarikel.40 = {
 
 		add_character_flag = given_up_arikel_hunt_flag
 		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_arikel }
-		
+
 		}
 }
 
-#Labyrinth Navigation - Ariadne's Thread
-
 POD_anteshuntarikel.4 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -276,10 +273,10 @@ POD_anteshuntarikel.4 = {
 
 	option = {
 		name = POD_anteshuntarikel.4.effect.success.desc
-		
+
 		show_as_unavailable = {
 			NOT = { has_trait = auspexadvanced }
-			NOT = { has_trait = presenceadvanced }						
+			NOT = { has_trait = presenceadvanced }
 		}
 
 		trigger = {
@@ -296,9 +293,8 @@ POD_anteshuntarikel.4 = {
 		}
 }
 
-#14 Sacrifices for The Minotaur
-
 POD_anteshuntarikel.5 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -353,7 +349,7 @@ POD_anteshuntarikel.5 = {
                 }
             }
 		}
-	
+
 	option = {
 		name = POD_anteshuntarikel.5.b
 
@@ -395,14 +391,14 @@ POD_anteshuntarikel.5 = {
 
 		show_as_unavailable = {
 			NOT = { has_trait = bloodsorceryadvanced }
-			NOT = { has_trait = celerityadvanced }						
+			NOT = { has_trait = celerityadvanced }
 		}
-		
+
 		trigger = {
 			has_trait = bloodsorceryadvanced
 			has_trait = celerityadvanced
 		}
-		
+
 		add_stress = minor_stress_gain
 
 		trigger_event = {
@@ -413,9 +409,8 @@ POD_anteshuntarikel.5 = {
 
 }
 
-#Minotaur Showdown
-
 POD_anteshuntarikel.6 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -476,9 +471,8 @@ POD_anteshuntarikel.6 = {
 
 }
 
-#Chambers Crumble
-
 POD_anteshuntarikel.7 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -503,12 +497,12 @@ POD_anteshuntarikel.7 = {
 
 		show_as_unavailable = {
 			NOT = { has_perk = between_the_ticks_perk }
-			NOT = { has_perk = armoured_flesh_perk }						
+			NOT = { has_perk = armoured_flesh_perk }
 		}
-		
+
 		trigger = {
-			has_perk = between_the_ticks_perk 
-			has_perk = armoured_flesh_perk 
+			has_perk = between_the_ticks_perk
+			has_perk = armoured_flesh_perk
 		}
 
 		trigger_event = {
@@ -520,15 +514,15 @@ POD_anteshuntarikel.7 = {
 
 	option = {
 		name = POD_anteshuntarikel.7.b
-		
+
 		trigger = {
 			OR = {
-			has_perk = between_the_ticks_perk 
-			has_perk = armoured_flesh_perk 
+			has_perk = between_the_ticks_perk
+			has_perk = armoured_flesh_perk
 			}
 		}
 
-		POD_increase_wounds_hostile_effect = { REASON = duel_aggravated ATTACKER = root COUNT = POD_triple_wound_damage } 
+		POD_increase_wounds_hostile_effect = { REASON = duel_aggravated ATTACKER = root COUNT = POD_triple_wound_damage }
 
 		trigger_event = {
 			id = POD_anteshuntarikel.8
@@ -539,10 +533,10 @@ POD_anteshuntarikel.7 = {
 
 	option = {
 		name = POD_anteshuntarikel.7.c
-		
+
 		trigger = {
 			NOT = { has_perk = between_the_ticks_perk }
-			NOT = { has_perk = armoured_flesh_perk }	
+			NOT = { has_perk = armoured_flesh_perk }
 		}
 
 		eah_end_ante_journey_effect = { TYPE = eah_hunt_ante_arikel }
@@ -551,12 +545,11 @@ POD_anteshuntarikel.7 = {
 			death_reason = death_disappearance
 		}
 
-	}	
+	}
 }
 
-#The Guilt - Arikel's Presence
-
 POD_anteshuntarikel.8 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -619,10 +612,8 @@ POD_anteshuntarikel.8 = {
 		}
 }
 
-
-#The Mirror Doors
-
 POD_anteshuntarikel.9 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -634,7 +625,7 @@ POD_anteshuntarikel.9 = {
 	desc = POD_anteshuntarikel.9.desc
 	theme = toreador_coa
 	override_background = { reference = shader_event_kaleidoscope }
-    
+
     widget = {
         gui = "POD_shader_event_kaleidoscope"
         container = "background_shader_vfx_container"
@@ -673,7 +664,7 @@ POD_anteshuntarikel.9 = {
 				desc = POD_anteshuntarikel.9.failure.effect.desc
 
 				add_intrigue_skill = -10
-				add_piety_level = -3		
+				add_piety_level = -3
 				add_character_modifier = {
 					modifier = hideous_truth_modifier
 					years = 50
@@ -688,9 +679,8 @@ POD_anteshuntarikel.9 = {
 		}
 }
 
-#Arikel Found
-
 POD_anteshuntarikel.10 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -709,17 +699,16 @@ POD_anteshuntarikel.10 = {
 
 	option = {
 		name = POD_anteshuntarikel.10.a
-		
+
 		trigger_event = {
 			id = POD_anteshuntarikel.11
 			}
-		
+
 		}
 }
 
-#Victory
-
 POD_anteshuntarikel.11 = {
+	id_override_priority = 1
 
 	trigger = { eah_arikel_hunt_can_continue_trigger = yes }
 	on_trigger_fail = {
@@ -731,7 +720,7 @@ POD_anteshuntarikel.11 = {
 	desc = POD_anteshuntarikel.11.desc
 	theme = toreador_coa
 	override_background = { reference = shader_event_kaleidoscope }
-    
+
     widget = {
         gui = "POD_shader_event_kaleidoscope"
         container = "background_shader_vfx_container"
