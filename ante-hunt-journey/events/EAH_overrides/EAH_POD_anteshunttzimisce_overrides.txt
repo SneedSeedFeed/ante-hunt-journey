@@ -1,4 +1,6 @@
-﻿POD_anteshunttzimisce.3 = {
+﻿namespace = POD_anteshunttzimisce
+
+POD_anteshunttzimisce.3 = {
 	id_override_priority = 1
 	type = character_event
 	content_source = dlc_POD
